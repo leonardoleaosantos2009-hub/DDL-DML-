@@ -1,17 +1,53 @@
-# 🏫 Banco de Dados - Escola
+# 🏫 Banco de Dados Escolar
 
 ## 📌 Sobre o projeto
 
-Projeto de banco de dados desenvolvido para representar
-um sistema escolar.
+Este projeto consiste na criação e manipulação de um banco de dados
+para representar um sistema escolar.
 
-O objetivo é estruturar as informações necessárias para
-organizar os dados de uma instituição de ensino.
+O projeto foi desenvolvido utilizando SQL e é dividido em duas partes:
+a criação da estrutura do banco de dados (DDL) e a manipulação dos
+dados (DML).
 
-## 🎯 Objetivo
+## 📂 Arquivos
 
-Aplicar conceitos de banco de dados relacionais através
-de um cenário prático.
+### `escola_db.sql`
+
+Arquivo responsável pela criação da estrutura do banco de dados.
+
+Nele são definidos os elementos necessários para estruturar o banco,
+como banco de dados, tabelas e seus respectivos campos.
+
+### `DML_da_escola.sql`
+
+Arquivo responsável pela manipulação dos dados do banco.
+
+Nele são utilizados comandos SQL para inserir e trabalhar com os
+registros das tabelas.
+
+## 🧱 DDL
+
+**DDL (Data Definition Language)** é utilizada para definir a estrutura
+do banco de dados.
+
+Entre os comandos estudados estão:
+
+- `CREATE DATABASE`
+- `CREATE TABLE`
+- `PRIMARY KEY`
+- `FOREIGN KEY`
+- Definição de tipos de dados
+
+## 📝 DML
+
+**DML (Data Manipulation Language)** é utilizada para manipular os
+dados armazenados nas tabelas.
+
+Comandos trabalhados:
+
+- `INSERT`
+- `UPDATE`
+- `DELETE`
 
 ## 🛠️ Tecnologias
 
@@ -19,26 +55,29 @@ de um cenário prático.
 - MySQL
 - MySQL Workbench
 
-## 📚 Conceitos praticados
-
-- Criação de banco de dados
-- Criação de tabelas
-- Tipos de dados
-- Chaves primárias
-- Chaves estrangeiras
-- Relacionamentos
-- DDL
-
 ## ▶️ Como executar
 
 1. Abra o MySQL Workbench.
-2. Abra `escola_db.sql`.
-3. Execute o script.
-4. Verifique as tabelas criadas.
+2. Execute primeiro o arquivo `escola_db.sql`.
+3. Após a criação da estrutura do banco, execute o arquivo
+   `DML_da_escola.sql`.
+4. Verifique os dados e as tabelas criadas.
 
-## 🔗 Arquivos relacionados
+## 🎯 Objetivo
 
-- `DML_da_escola.sql` — comandos de manipulação dos dados.
+O objetivo deste projeto é praticar a criação de estruturas de bancos
+de dados e a manipulação de registros utilizando SQL.
+
+## 📚 Conceitos aprendidos
+
+- DDL
+- DML
+- Criação de banco de dados
+- Criação de tabelas
+- Manipulação de registros
+- Chaves primárias
+- Chaves estrangeiras
+- Relacionamentos entre tabelas
 
 ## 📌 Status
 
