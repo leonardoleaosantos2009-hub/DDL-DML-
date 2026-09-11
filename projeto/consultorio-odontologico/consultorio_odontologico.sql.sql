@@ -1,0 +1,34 @@
+CREATE DATABASE IF NOT EXISTS novo_consultorio_db;
+
+USE novo_consultorio_db;
+
+CREATE TABLE IF NOT EXISTS paciente(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+cpf VARCHAR(15) NOT NULL,
+nascimento DATE NOT NULL,
+telefone VARCHAR(20) NOT NULL,
+endereco VARCHAR(100) NOT NULL,
+email VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS dentista(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+cro VARCHAR (15) NOT NULL,
+especialidade VARCHAR (50) NOT NULL,
+telefone VARCHAR(20) NOT NULL,
+email VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS consulta(
+id INT AUTO_INCREMENT PRIMARY KEY,
+id_paciente INT NOT NULL,
+id_dentista INT NOT NULL,
+data_consulta DATETIME NOT NULL,
+horario TIME NOT NULL,
+valor DECIMAL NOT NULL,
+situacao VARCHAR (25) NOT NULL,
+FOREIGN KEY (id_paciente) REFERENCES paciente (id),
+FOREIGN KEY (id_dentista) REFERENCES dentista (id)
+);
