@@ -1,0 +1,21 @@
+CREATE DATABASE escola_db;
+
+USE escola_db;
+
+CREATE TABLE aluno(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(100) NOT NULL,
+	matricula VARCHAR(20) NOT NULL,
+    turma VARCHAR(10) NOT NULL,
+    nascimente DATE NOT NULL,
+    email VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE nota(
+id INT AUTO_INCREMENT PRIMARY KEY,
+id_aluno INT NOT NULL,
+disciplina VARCHAR (50) NOT NULL,
+valor DECIMAL (4.2) NOT NULL,
+bimestre INT NOT NULL,
+FOREIGN KEY(id_aluno) REFERENCES aluno (id)
+);
