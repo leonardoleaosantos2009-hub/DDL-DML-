@@ -1,0 +1,39 @@
+CREATE DATABASE IF NOT EXISTS novo_oficina_mecanica_db;
+
+USE novo_oficina_mecanica_db;
+
+CREATE TABLE IF NOT EXISTS cliente(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+cpf VARCHAR(15) NOT NULL,
+telefone VARCHAR(20) NOT NULL,
+email VARCHAR(50) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS veiculo(
+id INT AUTO_INCREMENT PRIMARY KEY,
+id_cliente INT NOT NULL,
+placa VARCHAR(10) NOT NULL,
+marca VARCHAR (50) NOT NULL,
+modelo VARCHAR (50) NOT NULL,
+ano INT NOT NULL,
+FOREIGN KEY(id_cliente) REFERENCES cliente (id)
+);
+CREATE TABLE IF NOT EXISTS mecanico(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+especialidade VARCHAR (50) NOT NULL,
+telefone VARCHAR(20) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS servico(
+id INT AUTO_INCREMENT PRIMARY KEY,
+id_mecanico INT NOT NULL,
+id_veiculo INT NOT NULL,
+descricao VARCHAR(255) NOT NULL,
+data_entrada DATETIME NOT NULL,
+data_saida DATETIME NOT NULL,
+valor DECIMAL(10,2),
+FOREIGN KEY (id_mecanico) REFERENCES mecanico (id),
+FOREIGN KEY (id_veiculo) REFERENCES veiculo (id)
+);
+
+
